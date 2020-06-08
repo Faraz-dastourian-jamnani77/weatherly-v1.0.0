@@ -12,7 +12,8 @@ const weatherStats = (longitude,latitude,callback)=>{
                  callback('Unable to find your location :(')
              }
              else{
-                 callback(undefined,`It's ${body.main.temp} degrees out there and it has ${body.weather[0].description}`)
+                 callback(undefined,`It's ${body.main.temp} degrees out there and it has ${body.weather[0].description}
+                 \n Hottest Temprature:${body.main.temp_max}\n Coolest Temprature:${body.main.temp_min}`)
              }    
          })
 
